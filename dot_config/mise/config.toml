@@ -1,0 +1,22 @@
+# vim: filetype=toml
+
+[settings]
+experimental = true
+
+[settings.ruby]
+compile = false
+ruby_build_opts = "--enable-yjit --with-openssl-dir=/opt/homebrew/opt/openssl@3"
+verbose_install = true
+
+[tools]
+python = ["3.14.4", "3.11.15"]
+rust = ["nightly", "stable"]
+buf = "1.68.2"
+go = "1.26.2"
+gh = "latest"
+just = "latest"
+zig = "0.16.0"
+fnox = "latest"
+lua = ["5.1"]
+java = ["26.0.0", "zulu-8.92.0.21"]
+ruby = ["latest", "3.4.9", "3.2.11", "3.2.3"]
