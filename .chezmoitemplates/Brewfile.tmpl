@@ -1,0 +1,151 @@
+{{
+$formulae := list
+"age"
+"arping"
+"bat"
+"bat-extras"
+"blake3"
+"boost"
+"brotli"
+"btop"
+"buf"
+"ca-certificates"
+"certifi"
+"cffi"
+"cmake"
+"coreutils"
+"cryptography"
+"curl"
+"dockutil"
+"d2"
+"fd"
+"fish"
+"flac"
+"fzf"
+"gcc"
+"gh"
+"git"
+"git-lfs"
+"gmp"
+"gnupg"
+"gnutls"
+"gzip"
+"hiredis"
+"htmlq"
+"httpie"
+"httping"
+"iamb"
+"imagemagick"
+"jpeg-turbo"
+"jpeg-xl"
+"jq"
+"keychain"
+"lazygit"
+"libevent"
+"libfido2"
+"libpq"
+"libsodium"
+"libssh2"
+"llvm"
+"luajit"
+"lz4"
+"lzo"
+"micro"
+"mise"
+"mpdecimal"
+"mpfr"
+"mysql-client"
+"nbytes"
+"ncurses"
+"neovim"
+"ninja"
+"numi-cli"
+"openblas"
+"openssl@3"
+"pcre2"
+"pigz"
+"pinentry"
+"pinentry-mac"
+"pipx"
+"pkg-config"
+"ripgrep"
+"rlwrap"
+"shellcheck"
+"socat"
+"sqlite"
+"tala"
+"telnet"
+"tldr"
+"tmux"
+"tree-sitter"
+"tree-sitter-cli"
+"usage"
+"uv"
+"watch"
+"webp"
+"wget"
+"xterm"
+"x264"
+"x265"
+"xcodes"
+"xq"
+"xxhash"
+"xz"
+"yq"
+"zellij"
+"zig"
+"zlib"
+"zlib-ng-compat"
+"zsh"
+"zstd" -}}
+{{
+$heads := list
+"watchman" -}}
+{{
+$casks := list
+"bitwarden"
+"claude-code@latest"
+"copilot-language-server"
+"cursor"
+"font-0xproto-nerd-font"
+"font-fira-code"
+"font-fira-code-nerd-font"
+"font-hack-nerd-font"
+"font-hasklug-nerd-font"
+"font-m+-nerd-font"
+"font-meslo-lg"
+"font-meslo-lg-dz"
+"font-meslo-lg-nerd-font"
+"font-monoid-nerd-font"
+"font-mononoki-nerd-font"
+"font-profont-nerd-font"
+"font-space-mono-nerd-font"
+"ghostty"
+"google-chrome@dev"
+"meld"
+"numi"
+"obsidian"
+"zed@preview" -}}
+
+tap 'homebrew/services'
+tap 'nikolaeu/numi'
+tap 'mdogan/zulu'
+tap 'jordancoin/tap'
+tap 'bufbuild/buf'
+tap 'homebrew/services'
+tap 'nikolaeu/numi'
+tap 'wix/brew'
+tap 'terrastruct/tap'
+
+{{ range ($formulae | sortAlpha | uniq) -}}
+brew '{{ . }}'
+{{ end -}}
+
+{{ range ($heads | sortAlpha | uniq) -}}
+brew '{{ . }}', args: %w[--fetch-HEAD --HEAD]
+{{ end -}}
+
+{{ range ($casks | sortAlpha | uniq) -}}
+cask '{{ . }}'
+{{ end -}}
+
