@@ -2,6 +2,7 @@ font-family = MesloLGSDZ Nerd Font Mono
 font-size = 16
 font-thicken = true
 font-thicken-strength = 0
+font-feature = -calt, -liga, -dlig
 
 theme = Monokai Pro Spectrum
 
@@ -25,6 +26,7 @@ theme = cyberdream
 shell-integration = detect
 shell-integration-features = true
 
+keybind = shift+enter=text:\x1b\r
 keybind = ctrl+n>t=new_tab
 keybind = ctrl+n>m=new_tab
 keybind = chain=text:iamb\n
