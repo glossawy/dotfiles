@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
+# vim: filetype=fish
 
 printf "%s\n" \
     NSAutomaticCapitalizationEnabled 0 \
@@ -16,7 +17,7 @@ printf "%s\n" \
 printf "%s\n" \
     autohide int 1 \
     orientation string bottom \
-    show-recents int 1 \
+    show-recents int 0 \
     showDesktopGestureEnabled int 0 \
     showLaunchoadGestureEnabled int 0 \
     showMissionControlGestureEnabled int 0 |
