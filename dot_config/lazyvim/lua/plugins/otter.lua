@@ -10,7 +10,14 @@ return {
     opts = {
       debug = false,
       extensions = {},
-      injectable_languages = {},
+      injectable_languages = {
+        "ruby",
+        "python",
+        "lua",
+        "sql",
+        "msql",
+        "mysql",
+      },
       lsp = {
         diagnostic_update_events = { "BufWritePost" },
         root_dir = function(_, bufnr)

@@ -3,5 +3,5 @@
 set -eufo pipefail
 
 brew bundle --file=/dev/stdin <<EOF || true
-{{ includeTemplate "Brewfile.tmpl" . }}
+{{ includeTemplate "dot_config/homebrew/Brewfile.tmpl" . }}
 EOF

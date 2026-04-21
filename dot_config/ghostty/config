@@ -1,13 +1,13 @@
-font-family = MesloLGSDZ Nerd Font Mono
-font-size = 16
+font-family = Mononoki Nerd Font
+font-size = 20
 font-thicken = true
 font-thicken-strength = 0
 font-feature = -calt, -liga, -dlig
 
-theme = Monokai Pro Spectrum
+theme = cyberdream
 
-background-opacity = 0.95
-background-blur = 30
+background-opacity = 0.925
+background-blur = 20
 
 link-url = true
 link-previews = true
